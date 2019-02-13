@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="EmployeesModel1.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="ResourceList">
+    <Key>
+      <PropertyRef Name="Resource_Id" />
+    </Key>
+    <Property Name="Resource_Id" Type="int" Nullable="false" />
+    <Property Name="Resourcr_Name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Resource_Type" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Availability" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="EmployeesModel1StoreContainer">
+    <EntitySet Name="ResourceList" EntityType="Self.ResourceList" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

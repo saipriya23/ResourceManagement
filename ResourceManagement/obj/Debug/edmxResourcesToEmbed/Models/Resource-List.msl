@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="EmployeesModel1StoreContainer" CdmEntityContainer="EmployeesEntities1">
+    <EntitySetMapping Name="ResourceLists">
+      <EntityTypeMapping TypeName="EmployeesModel1.ResourceList">
+        <MappingFragment StoreEntitySet="ResourceList">
+          <ScalarProperty Name="Resource_Id" ColumnName="Resource_Id" />
+          <ScalarProperty Name="Resourcr_Name" ColumnName="Resourcr_Name" />
+          <ScalarProperty Name="Resource_Type" ColumnName="Resource_Type" />
+          <ScalarProperty Name="Availability" ColumnName="Availability" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

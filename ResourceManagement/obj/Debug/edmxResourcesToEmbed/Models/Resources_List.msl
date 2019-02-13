@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="EmployeesModel1StoreContainer" CdmEntityContainer="EmployeesEntities4">
+    <EntitySetMapping Name="Laptop_List">
+      <EntityTypeMapping TypeName="EmployeesModel1.Laptop_List">
+        <MappingFragment StoreEntitySet="Laptop_List">
+          <ScalarProperty Name="Resource_Id" ColumnName="Resource-Id" />
+          <ScalarProperty Name="Resource_Name" ColumnName="Resource_Name" />
+          <ScalarProperty Name="Availablity" ColumnName="Availablity" />
+          <ScalarProperty Name="Start_Date" ColumnName="Start_Date" />
+          <ScalarProperty Name="End_Date" ColumnName="End_Date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LoginDetails">
+      <EntityTypeMapping TypeName="EmployeesModel1.LoginDetail">
+        <MappingFragment StoreEntitySet="LoginDetails">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Mobile_List">
+      <EntityTypeMapping TypeName="EmployeesModel1.Mobile_List">
+        <MappingFragment StoreEntitySet="Mobile_List">
+          <ScalarProperty Name="Resource_Id" ColumnName="Resource_Id" />
+          <ScalarProperty Name="Resouce_Name" ColumnName="Resouce_Name" />
+          <ScalarProperty Name="Availability" ColumnName="Availability" />
+          <ScalarProperty Name="Start_Date" ColumnName="Start_Date" />
+          <ScalarProperty Name="End_Date" ColumnName="End_Date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
