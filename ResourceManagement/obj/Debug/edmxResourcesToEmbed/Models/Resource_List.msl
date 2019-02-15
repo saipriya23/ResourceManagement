@@ -1,14 +1,22 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="EmployeesModelStoreContainer" CdmEntityContainer="EmployeeEntities">
+  <EntityContainerMapping StorageEntityContainer="EmployeesModelStoreContainer" CdmEntityContainer="EmployeeEntities3">
+    <EntitySetMapping Name="HistoryDetails">
+      <EntityTypeMapping TypeName="EmployeesModel.HistoryDetail">
+        <MappingFragment StoreEntitySet="HistoryDetails">
+          <ScalarProperty Name="Resource_Id" ColumnName="Resource_Id" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Start_Date" ColumnName="Start_Date" />
+          <ScalarProperty Name="End_Date" ColumnName="End_Date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="Laptop_List">
       <EntityTypeMapping TypeName="EmployeesModel.Laptop_List">
         <MappingFragment StoreEntitySet="Laptop_List">
           <ScalarProperty Name="Resource_Id" ColumnName="Resource-Id" />
           <ScalarProperty Name="Resource_Name" ColumnName="Resource_Name" />
           <ScalarProperty Name="Availablity" ColumnName="Availablity" />
-          <ScalarProperty Name="Start_Date" ColumnName="Start_Date" />
-          <ScalarProperty Name="End_Date" ColumnName="End_Date" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -28,8 +36,6 @@
           <ScalarProperty Name="Resource_Id" ColumnName="Resource_Id" />
           <ScalarProperty Name="Resource_Name" ColumnName="Resource_Name" />
           <ScalarProperty Name="Availability" ColumnName="Availability" />
-          <ScalarProperty Name="Start_Date" ColumnName="Start_Date" />
-          <ScalarProperty Name="End_Date" ColumnName="End_Date" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

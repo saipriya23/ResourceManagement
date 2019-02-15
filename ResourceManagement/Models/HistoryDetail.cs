@@ -12,10 +12,11 @@ namespace ResourceManagement.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Mobile_List
+    public partial class HistoryDetail
     {
         public string Resource_Id { get; set; }
-        public string Resource_Name { get; set; }
-        public int Availability { get; set; }
+        public string UserName { get; set; }
+        public System.DateTime Start_Date { get; set; }
+        public System.DateTime End_Date { get; set; }
     }
 }

@@ -17,7 +17,5 @@ namespace ResourceManagement.Models
         public string Resource_Id { get; set; }
         public string Resource_Name { get; set; }
         public string Availablity { get; set; }
-        public System.DateTime Start_Date { get; set; }
-        public System.DateTime End_Date { get; set; }
     }
 }

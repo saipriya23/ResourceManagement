@@ -1,5 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="EmployeesModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="HistoryDetail">
+    <Key>
+      <PropertyRef Name="Resource_Id" />
+    </Key>
+    <Property Name="Resource_Id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Start_Date" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="End_Date" Type="DateTime" Nullable="false" Precision="0" />
+  </EntityType>
   <EntityType Name="Laptop_List">
     <Key>
       <PropertyRef Name="Resource_Id" />
@@ -7,8 +16,6 @@
     <Property Name="Resource_Id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="Resource_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="Availablity" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="Start_Date" Type="DateTime" Nullable="false" Precision="0" />
-    <Property Name="End_Date" Type="DateTime" Nullable="false" Precision="0" />
   </EntityType>
   <EntityType Name="LoginDetail">
     <Key>
@@ -26,10 +33,9 @@
     <Property Name="Resource_Id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="Resource_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="Availability" Type="Int32" Nullable="false" />
-    <Property Name="Start_Date" Type="DateTime" Nullable="false" Precision="0" />
-    <Property Name="End_Date" Type="DateTime" Nullable="false" Precision="0" />
   </EntityType>
-  <EntityContainer Name="EmployeeEntities" annotation:LazyLoadingEnabled="true">
+  <EntityContainer Name="EmployeeEntities3" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="HistoryDetails" EntityType="Self.HistoryDetail" />
     <EntitySet Name="Laptop_List" EntityType="Self.Laptop_List" />
     <EntitySet Name="LoginDetails" EntityType="Self.LoginDetail" />
     <EntitySet Name="Mobile_List" EntityType="Self.Mobile_List" />

@@ -10,10 +10,11 @@ namespace ResourceManagement.Controllers
 {
     public class MobileListController : ApiController
     {
+        //for getting the mobile list from database 
         [HttpGet]
         public IHttpActionResult Resourcelist()
         {
-            var entities = new EmployeeEntities();
+            var entities = new EmployeeEntities3();
             var rec = entities.Mobile_List.ToList();
             return Ok(rec);
         }

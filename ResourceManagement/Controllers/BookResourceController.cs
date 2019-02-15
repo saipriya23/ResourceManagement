@@ -8,41 +8,30 @@ using System.Web.Http;
 
 namespace ResourceManagement.Controllers
 {
-
-    public class LoginController : ApiController
+    public class BookResourceController : ApiController
     {
-        [HttpGet]
-        public IHttpActionResult Login()
-        {
-            return Ok();
-        }
-
-        //for validating the login details
+        //for storing the booked resource in database
         [HttpPost]
-        public IHttpActionResult Login( LoginDetail userInfo)
+        public IHttpActionResult BookResource(HistoryDetail BookingDetails)
         {
             if (ModelState.IsValid)
             {
                 using (EmployeeEntities3 entity = new EmployeeEntities3())
                 {
-                    var record = entity.LoginDetails.Where(x => x.UserName.Equals(userInfo.UserName) && x.Password.Equals(userInfo.Password)).FirstOrDefault();
-                    if (record != null)
-                    {
-
-                        return Ok(true);
-                    }
+                    entity.HistoryDetails.Add(BookingDetails);
+                    entity.SaveChanges();
+                    return Ok(true);
                 }
             }
-
-              return Ok(false);
+            return Ok(false);
         }
+
         public HttpResponseMessage Options()
         {
             var res = new HttpResponseMessage();
             res.StatusCode = HttpStatusCode.OK;
             return res;
         }
-
     }
-
 }
+

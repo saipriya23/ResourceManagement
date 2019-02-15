@@ -13,10 +13,10 @@ namespace ResourceManagement.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class EmployeeEntities : DbContext
+    public partial class EmployeeEntities3 : DbContext
     {
-        public EmployeeEntities()
-            : base("name=EmployeeEntities")
+        public EmployeeEntities3()
+            : base("name=EmployeeEntities3")
         {
         }
     
@@ -25,6 +25,7 @@ namespace ResourceManagement.Models
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<HistoryDetail> HistoryDetails { get; set; }
         public virtual DbSet<Laptop_List> Laptop_List { get; set; }
         public virtual DbSet<LoginDetail> LoginDetails { get; set; }
         public virtual DbSet<Mobile_List> Mobile_List { get; set; }

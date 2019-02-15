@@ -103,11 +103,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\AvailabilityController.cs" />
+    <Compile Include="Controllers\BookResourceController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\LaptopListController.cs" />
     <Compile Include="Controllers\MobileListController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\HistoryDetail.cs">
+      <DependentUpon>Resource_List.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Laptop_List.cs">
       <DependentUpon>Resource_List.tt</DependentUpon>
@@ -152,6 +157,7 @@
     </None>
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
+      <SubType>Designer</SubType>
     </None>
   </ItemGroup>
   <ItemGroup>

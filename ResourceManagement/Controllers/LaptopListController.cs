@@ -10,10 +10,11 @@ namespace ResourceManagement.Controllers
 {
     public class LaptopListController : ApiController
     {
+        //for getting the laptop list from database
         [HttpGet]
         public IHttpActionResult ResourceList()
         {
-            var entities = new EmployeeEntities();
+            var entities = new EmployeeEntities3();
             var records = entities.Laptop_List.ToList();
             return Ok(records);
         }
